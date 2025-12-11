@@ -34,6 +34,9 @@ def tangent(a):
 def cotangent(a): 
     return 1/math.tan(math.radians(a))
 
+def root(a):
+    return a**0.5
+
 expression = ""
 
 def btn_click(item):
@@ -109,12 +112,15 @@ def calculate(vir):
     elif "ctg" in vir:
         v = vir.replace("ctg","").strip("() ")
         return cotangent(float(v))
+    elif "√" in vir:
+        v = vir.replace("","").strip("() ")
+        return cotangent(float(v))        
     else:
         return vir
 
 
 root = Tk()
-root.geometry("380x420")
+root.geometry("325x280")
 root.title("Калькулятор")
 root.resizable(0,0)
 
